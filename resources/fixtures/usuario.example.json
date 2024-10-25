@@ -1,0 +1,9 @@
+{
+    "sysadmin_valido": {
+        "email_valido": "informar-email-usuario-sysadmin-valido",
+        "senha_valida": "informar-password-usuario-sysadmin-valido"
+    },
+    "admin_valido": {
+        "senha_confirme_a_senha_validas": "informar-senha-confirme-a-senha-usuario-admin-valido"
+    }
+}

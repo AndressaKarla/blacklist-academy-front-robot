@@ -1,0 +1,7 @@
+__pycache__
+*.xml
+*.html
+*.png
+*.log
+resources/fixtures/*.json
+!resources/fixtures/*.example.json
