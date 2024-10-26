@@ -42,3 +42,10 @@ Clicar no botão "ENTRAR"
 Apresentar a tela Home
     Sleep    ${TIMEOUT}
     Location Should Be    ${URL}/home
+
+Realizar login (ADMIN)
+    Acessar a tela de Login do ERP do Qa.Coders Academy
+    Gerar e obter dados usuario admin dinâmico
+    Informar os campos de email e senha de um usuário ADMIN    email_admin=${EMAIL_ADMIN}    senha_admin=${SENHA_CONFIRME_A_SENHA}
+    Clicar no botão "ENTRAR"
+    Apresentar a tela Home
