@@ -125,4 +125,12 @@ Gerar e obter dados usuario admin dinâmico
     ...    nome_completo=${NOME_COMPLETO}
     ...    email=${EMAIL_ADMIN}
     ...    cpf=${CPF}
-    ...    senha_confirme_a_senha=${SENHA_CONFIRME_A_SENHA}
+    ...    senha_confirme_a_senha=${SENHA_CONFIRME_A_SENHA} 
+
+Gerar e obter dados usuario admin dinâmico para modal "NOVO CADASTRO"
+    [Arguments]    ${nome_completo}    ${email}    ${cpf}   ${senha_confirme_a_senha}
+    Gerar nome completo usuario admin dinâmico
+    Gerar email usuario admin dinâmico
+    Gerar cpf usuario admin dinâmico
+    Carregar usuario fixture
+    Obter senha e confirme a senha estáticas usuario admin dinâmico
