@@ -6,6 +6,7 @@ Resource    ../../resources/base.resource
 *** Variables ***
 ${menu_cadastros}    id=Cadastros
 ${menu_usuarios}    id=Usuários
+
 ${botao_novo_cadastro}     css=button[class="css-fvzsut"]
 ${modal_novo_cadastro}    css=div.css-g7173l > div > form > h5
 ${campo_nome_completo}    css=input[name="fullName"]
@@ -16,6 +17,9 @@ ${campo_cpf}     id=cpf
 ${campo_senha}      css=input[name="password"]
 ${campo_confirme_a_senha}      css=input[name="confirmPassword"]
 ${botao_salvar_novo}     css=button[class="css-1vmo4go"]
+
+${botao_editar}    (//button[@id='edit'])[1]
+${modal_editar_cadastro}    css=div.css-g7173l > div > form > h5
 
 
 *** Keywords ***
@@ -70,3 +74,10 @@ Clicar no botão "SALVAR NOVO"
 Apresentar a tela "Usuários"
     Sleep    ${TIMEOUT}
     Location Should Be    ${URL}/user
+
+Clicar no botão "Editar"
+    Wait Until Element Is Visible    ${botao_editar}
+    Click Element    ${botao_editar}
+
+Apresentar o modal "Editar Cadastro"
+    Wait Until Element Is Visible    ${modal_editar_cadastro}
