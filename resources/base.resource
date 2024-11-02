@@ -11,6 +11,7 @@ Variables           environments/${ENV}.json
 *** Variables ***
 ${URL}                  ${base_url}
 ${URI}                  ${base_uri}
+
 ${BROWSER_CHROME}       chrome
 ${BROWSER_FIREFOX}      firefox
 ${HEADLESS_CHROME}      headlesschrome
