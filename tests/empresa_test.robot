@@ -4,10 +4,13 @@ Resource            ../resources/base.resource
 Resource            ../resources/keywords/login_keyword.robot
 Resource            ../resources/keywords/empresa_keyword.robot
 
+Test Teardown  Encerrar sessão 
+
+
 *** Test Cases ***
  Listar empresas cadastradas    
-     Realizar login (ADMIN)
      [Tags]    empresa_admin    regressao
+     Realizar login (ADMIN)
      Wait Until Page Contains   text=Logout
      Clicar na opção Cadastros
      Wait Until Page Contains   text=Cadastros
