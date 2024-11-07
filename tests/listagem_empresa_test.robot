@@ -2,7 +2,7 @@
 Library    Process 
 Resource            ../resources/base.resource
 Resource            ../resources/keywords/login_keyword.robot
-Resource            ../resources/keywords/empresa_keyword.robot
+Resource            ../resources/keywords/listagem_empresa_keyword.robot
 
 Test Teardown  Encerrar sessão 
 
