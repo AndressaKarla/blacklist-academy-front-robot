@@ -237,6 +237,7 @@ robot -d ./reports -v BROWSER:headlesschrome ./tests/*
 ```    
 
 - Acessar "reports > screenshots" 
+
 Ex.:
 ```
 - BairroEmpresa.png
