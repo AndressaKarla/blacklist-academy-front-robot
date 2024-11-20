@@ -54,7 +54,7 @@ Ex.:
 - Acessar o diretório "C:\Windows", procurar e excluir "chromedriver.exe"
 - Acessar o diretório "C:\Windows\System32", procurar e excluir "chromedriver.exe"
 
-## :hammer_and_wrench: Instalar novo chromedriver 
+## :hammer_and_wrench: Baixar novo chromedriver 
 - Verificar versão do navegador Chrome (Ex.: Versão 119.0.6045.124)
 ```
 chrome://settings/help
