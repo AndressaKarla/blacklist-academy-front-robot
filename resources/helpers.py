@@ -1,5 +1,20 @@
 import random, json
 
+def word_check(word):
+    word_3_letters = list(word.lower())
+    cont = 0
+    if word_3_letters[0] == "b":
+        cont += 1
+    if word_3_letters[1] == "l":
+        cont += 1
+    if word_3_letters[2] == "a":
+        cont += 1
+    
+    if cont == 3:
+        return 1
+    elif cont < 3 or cont > 3:
+        return 2
+
 def gerar_numeros_aleatorios(qtde_numeros):
     possible = "0123456789"
     text = ''.join(random.choice(possible) for _ in range(qtde_numeros))

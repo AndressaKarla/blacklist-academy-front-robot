@@ -25,3 +25,23 @@ Editar Cadastro Usuário (ADMIN) - Validar apresentar o modal "Editar Cadastro"
     Clicar no menu "Cadastros > Usuários"
     Clicar no botão "Editar"
     Apresentar o modal "Editar Cadastro"
+
+Filtro de pesquisa de lista de usuários
+    [Tags]    pesquisa_usuario    regressao
+    Realizar login (ADMIN)
+    Clicar no menu "Cadastros > Usuários"
+    Colocar filtro de pesquisa com 3 caracteres
+    Verificar se os 3 primeiros usuários começam com bla
+
+Datagrid botão de paginação avançar
+    [Tags]    paginacao_avancar_usuario    
+    Realizar login (ADMIN)
+    Clicar no menu "Cadastros > Usuários"
+    Apertar o botão de paginação avançar
+
+Datagrid botão de paginação voltar
+    [Tags]    paginacao_avancar_voltar_usuario    
+    Realizar login (ADMIN)
+    Clicar no menu "Cadastros > Usuários"
+    Apertar o botão de paginação avançar
+    Apertar o botão de paginação voltar    
