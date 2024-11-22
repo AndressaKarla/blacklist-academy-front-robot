@@ -7,9 +7,15 @@ Resource    ../../resources/base.resource
 ${menu_cadastros}    id=Cadastros
 ${menu_usuarios}    id=Usuários
 
+${search_input}    xpath=//*[@type="text"][@id=":r0:"]
+${texto_primário}    xpath=//li[@class='css-iatckd']/p
+${page_up}    xpath=//button[@class="css-kab9pu"]
+${page_down}    xpath=//button[@id="backButton"]
+
 ${botao_novo_cadastro}     css=button[class="css-fvzsut"]
 ${modal_novo_cadastro}    css=div.css-g7173l > div > form > h5
 ${campo_nome_completo}    css=input[name="fullName"]
+${full_name}    xpath=//label[@for="fullName"]
 ${campo_email_modal_novo_cadastro}      id=mail
 ${perfil_acesso}    ADMIN
 ${campo_perfil_acesso}    css=input[name="accessProfile"]
@@ -23,6 +29,26 @@ ${modal_editar_cadastro}    css=div.css-g7173l > div > form > h5
 
 
 *** Keywords ***
+Colocar filtro de pesquisa com 3 caracteres
+    Wait Until Element Is Visible    ${search_input}
+    Input Text    ${search_input}    text=bla
+
+Verificar se os 3 primeiros usuários começam com bla
+    Wait Until Element Is Visible    ${texto_primário}
+    ${texto_elemento}    Get Text    ${texto_primário}
+    ${response_txt}    helpers.Word Check    ${texto_elemento}
+    IF    ${response_txt} == 1
+        Log To Console    ${response_txt}
+    END
+
+Apertar o botão de paginação avançar
+    Wait Until Element Is Visible    ${page_up}
+    Click Element    ${page_up}
+
+Apertar o botão de paginação voltar
+    Wait Until Element Is Visible    ${page_down}
+    Click Element    ${page_down}
+
 Clicar no menu "Cadastros > Usuários"
     Wait Until Element Is Visible    ${menu_cadastros}
     Click Element    ${menu_cadastros}
@@ -81,3 +107,4 @@ Clicar no botão "Editar"
 
 Apresentar o modal "Editar Cadastro"
     Wait Until Element Is Visible    ${modal_editar_cadastro}
+    Wait Until Element Is Visible    ${full_name}

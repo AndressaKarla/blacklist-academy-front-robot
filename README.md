@@ -213,6 +213,10 @@ Ex. 3:
 ```
 robot -d ./reports -i empresa_admin ./tests/*
 ```
+Ex. 4: 
+```
+robot -d ./reports -i paginacao_avancar_voltar_usuario ./tests/*
+```
 
 # :dart: Executar os testes automatizados web no navegador chrome em modo headless (2º plano) no ambiente de automação, Gerar e armazenar reports html, xml e screenshots no computador
 ## :triangular_flag_on_post: Executar todos os cenários do projeto, Gerar e armazenar reports html, xml e screenshots na pasta "reports" no computador
